@@ -52,15 +52,7 @@ sleep_hours = st.number_input(
 
 # Predict button
 if st.button("Predict Performance"):
-
-    new_student = [[
-        study_hours,
-        attendance,
-        previous_score,
-        sleep_hours
-    ]]
-
-   if attendance < 75 or previous score < 40:
+if attendance < 75 or previous score < 40:
          st.error("Predicted Result: Fail")
 else:
     st.success("Predicted Result: Pass")
