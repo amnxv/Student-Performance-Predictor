@@ -60,6 +60,7 @@ if st.button("Predict Performance"):
         sleep_hours
     ]]
 
-    prediction = model.predict(new_student)
-
-    st.success(f"Predicted Result: {prediction[0]}")
+   if attendance < 75 or previous score < 40:
+         st.error("Predicted Result: Fail")
+else:
+    st.success("Predicted Result: Pass")
