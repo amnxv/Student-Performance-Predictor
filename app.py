@@ -13,6 +13,9 @@ y = data["Result"]
 model = DecisionTreeClassifier(random_state=42)
 model.fit(X, y)
 
+accuracy = model.score(X, y)
+st.write("Model Accuracy:", round(accuracy * 100, 2), "%")
+
 # App title
 st.title("🎓 Student Performance Predictor")
 
